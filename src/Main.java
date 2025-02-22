@@ -6,9 +6,9 @@ public class Main {
         int month = 0;
         while (cash < 2_495_000){
             month++;
-            cash += 15_000 + cash * 10/100;
+            cash += 15_000 + cash * 12/100;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + cash + " рублей");
         }
-        System.out.println("Месяц " + month + ", сумма накоплений равна " + cash + " рублей");
 
         //Задание 2
         int i = 1;
@@ -74,11 +74,14 @@ public class Main {
 
         // Задание 8
         year = 0;
-        while (year <= 2125){
-            if (year >= 1825){
+        int cycle = 79;
+        int start = 2025 - 200;
+        int end = 2025+100;
+
+        for (year = 0; year < end; year += cycle) {
+            if (year > start) {
                 System.out.println(year);
             }
-            year += 79;
         }
 
 
